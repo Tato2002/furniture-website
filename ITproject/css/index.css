@@ -1,0 +1,882 @@
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+
+/******************NAV-BAR************************************************************************************
+ ******************************************************************************************************************/
+nav {
+	width: 100%;
+	height: 80px;
+}
+nav .container {
+	height: 100%;
+	width: 1340px;
+	max-width: 100%;
+	margin: auto;
+    
+}
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+ nav .row {
+ 	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+}
+.logo {
+	height: 25px;
+}
+
+.topnav {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+}
+.topnav-li {
+	list-style: none;
+	position: relative;
+	padding: 28px 0px;
+}
+
+
+.topnav-link {
+	font-size: 20px;
+	color:black;
+}
+
+#burgerMenuIcon {
+	display: none;
+}
+#burgerMenu {
+	display: none;
+}
+
+@media only screen and (max-width:1050px) {
+	
+
+	.topnav {
+		display: none;
+	}
+
+	#burgerMenu:checked ~ .topnav {
+		display: flex;
+	}
+	#burgerMenuIcon {
+		display: block;
+		z-index: 999;
+	}
+
+    .topnav {
+    	display: none;
+    	position: fixed;
+    	width: 100%;
+    	height: 100%;
+    	background: whitesmoke;
+    	top: 0;
+    	left: 0;
+    	flex-direction: column;
+        z-index: 12;
+    	align-items: center;
+    }
+}
+
+/******************HEADER************************************************************************************
+ ******************************************************************************************************************/
+header {
+    width: 1480px;
+    height: 800px;
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+
+    background-image: url(../images/hall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+header .container {
+    width: 643px;
+    height: 350px;
+    background:#DFE9F4 ;
+    padding: 58px;
+    position: absolute;
+    right: 90px;
+    bottom: 180px;
+    border-radius: 6px;
+}
+header .container h1 {
+    color: #054C73;
+}
+header .container p {
+    margin-bottom: 20px;
+}
+
+button {
+   padding: 22px 56px 22px 56px; 
+   border-radius: 50px;
+   border: none;
+   background:#054C73 ;
+}
+button a {
+    color: white;
+}
+@media only screen and (max-width:1230px) {
+    header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1050px) {
+header {
+    width: 100%;
+
+}
+}
+@media only screen and (max-width:850px) {
+  header .container {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    position: absolute;
+    right: unset;
+    background: rgb(223, 233, 244, 0.8);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  header .container h1 {
+    font-size: 25px;
+  }
+  header .container p {
+    font-size: 20px;
+  }
+}
+
+/******************containerbu************************************************************************************
+ ******************************************************************************************************************/
+.containerbu {
+    width: 1480px;
+    height: 150px;
+    background:#F2F5FF ;
+    margin: auto;
+}
+
+.containerbu .grid img {
+    height: 50px;
+    display: inline-block; 
+    position: absolute;
+   bottom: -100px;
+}
+
+.grid { 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 220px;
+    text-align: center;
+    margin-left:8%;
+    margin-right: 8%;
+       position: relative
+    }
+  
+  
+  article {
+   display: grid;
+    align-items: center;
+  }
+
+  
+  .text {
+    margin-left:60px;
+    position: absolute;
+    bottom: -100px ;
+    font-size: 15px;
+
+}
+@media only screen and (max-width:1230px) {
+   .containerbu {
+    width: 100%;
+    height: 150px;
+ }
+  .grid{
+    width: 100%;
+    height: fit-content;
+    grid-gap: 130px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width:1209px) {
+   
+  .grid{
+    grid-gap: 100px;
+  }
+}
+@media only screen and (max-width:1119px) {
+   
+  .grid{
+    grid-gap: 80px;
+  }
+}
+@media only screen and (max-width:1104px) {
+   
+  .grid{
+    grid-gap: 70px;
+  }
+}
+
+@media only screen and (max-width:1050px) {
+ .containerbu {
+    width: 100%;
+    height: fit-content;
+ }
+  .grid{
+    width: 100%;
+    height: fit-content;
+    grid-gap: 50px;
+    padding: 10px;
+  }
+
+
+.containerbu .grid img {
+   position: static;
+   bottom: unset;
+   margin: auto;
+   }
+
+  .text {
+    margin-left:unset;
+    position: static;
+    bottom: unset ;
+    font-size: 15px;
+
+}
+
+}
+@media only screen and (max-width:969px) {
+
+  .grid{
+    width: 800px;
+    margin: auto;
+    height: fit-content;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width:850px) {
+.containerbu {
+    width: 100%;
+    height: fit-content;
+ }
+  .grid{
+    width: 500px;
+    margin: auto;
+    height: fit-content;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+
+.containerbu .grid img {
+   position: static;
+   bottom: unset;
+   margin: auto;
+   }
+
+  .text {
+    margin-left:unset;
+    position: static;
+    bottom: unset ;
+    font-size: 15px;
+
+}
+}
+
+@media only screen and (max-width:507px) {
+
+  .grid{
+    width: 250px;
+    margin: auto;
+  }
+}
+/******************containerbu1************************************************************************************
+ ******************************************************************************************************************/
+.containerbu1 {
+    width: 1480px;
+    margin: auto;
+     margin-top: 100px;
+     margin-bottom: 80px;
+     font-family:sans-serif;
+}
+
+.containerbu1 h1 {
+    text-align: center;
+}
+.containerbu1 p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width:1230px) {
+   .containerbu1 {
+    width: 100%;
+}
+}
+/******************PORTFOLIO************************************************************************************
+ ******************************************************************************************************************/
+.containerbu1 {
+    width: 1480px;
+}
+.containerbu1 .container {
+    width: 100%;
+}
+.portfolio {
+    height: fit-content;
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+.portfolio .projects {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.father {
+    width: 490px;
+    margin: auto;
+}
+.portfolio .projects .card {
+width: 460px;
+}
+
+.portfolio .projects .card img {
+    width: 355px;
+    height: 434px;
+}
+.portfolio .projects .card h3 {
+    padding: 20px;
+}
+.portfolio .projects .father:nth-child(2) img, 
+.portfolio .projects .father:nth-child(5) img {
+    height: 434px;
+    position: absolute;
+    top: -10px;
+    left: 550px;
+}
+
+
+@media only screen and (max-width:1230px) {
+   .containerbu1 {
+    width: 100%;
+}
+.containerbu1 .container {
+    width: 100%;
+}
+.portfolio {
+    height: fit-content;
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+.portfolio .projects {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.father {
+    width: 490px;
+    margin: auto;
+}
+.portfolio .projects .card {
+width: 460px;
+margin-bottom: 20px;
+}
+
+.portfolio .projects .card img {
+    width: 355px;
+    height: 434px;
+}
+.portfolio .projects .card h3 {
+    padding: 20px;
+}
+.portfolio .projects .father:nth-child(2) img, 
+.portfolio .projects .father:nth-child(5) img {
+    position: static;
+}  
+}
+
+@media only screen and (max-width:443px){
+.portfolio .projects .card img {
+    width: 255px;
+    height: 334px;
+}
+.portfolio .projects .card {
+width: 280px;
+
+}
+.father {
+    width: 280px;
+    margin: auto;
+}
+} 
+
+/******************containerbu2************************************************************************************
+ ******************************************************************************************************************/
+
+.containerbu2 {
+    font-family: initial;
+    width: 1480px;
+    height: 700px;
+    margin: auto;
+    background: #F2F5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px ;
+    line-height: 25px;
+    position: relative;
+    z-index: -2;
+}
+.containerbu2 img {
+    height: 600px;
+ 
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    z-index: 3999;
+}
+
+.containerbu2 h1 {
+  margin-bottom: 20px;
+}
+
+.LearnMore {
+    margin-top: 40px;
+    float: left;
+    margin-left: 10px;
+}
+
+ .burti { 
+    width: 372px;
+    height: 372px;
+    border-radius: 50%;
+    background: #09513B;
+    position: absolute;
+    right: 290px;
+    bottom: 180px;
+    z-index: -1;
+}
+@media only screen and (max-width:1230px) {
+   .containerbu2 {
+    width: 100%;
+   }
+   .burti { 
+    width: 372px;
+    height: 372px;
+    border-radius: 50%;
+    background: #09513B;
+    position: absolute;
+    right: 12%;
+    bottom: 180px;
+    z-index: -1;
+}
+}
+@media only screen and (max-width:658px) {
+   .LearnMore {
+   padding: 17px 44px 17px 44px; 
+   border-radius: 50px;
+   border: none;
+   background:#054C73 ;
+}
+}
+@media only screen and (max-width:635px) {
+.containerbu2 {
+    display: unset;
+    background: #F2F5FF;
+}
+
+   .Superspan1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #F2F5FF;
+    padding-top:20px ;
+    padding-bottom: 20px;
+   }
+   .Superspan2 {
+    width: 100%;
+    display: block;
+    background: #F2F5FF;
+   }
+   .LearnMore {
+    float: unset;
+    margin-top: 20px;
+   }
+   .containerbu2 img {
+    width: 250px;
+    height: 400px;
+}
+
+.burti { 
+    width: 232px;
+    height: 232px;
+    border-radius: 50%;
+    background: #09513B;
+    position: absolute;
+    right: 15%;
+    bottom: 100px;
+    z-index: -1;
+}
+ } 
+@media only screen and (max-width:440px) {
+.burti{
+    right: 2%;
+}
+}
+/******************containerbu3************************************************************************************
+ ******************************************************************************************************************/
+.containerbu3 {
+    width: 1480px;
+     margin: auto;
+     margin-top: 60px;
+}
+
+.containerbu3 .contbu3-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+
+.containerbu3 .card-content {
+    width:1200px ;
+    margin: auto;
+}
+
+.containerbu3 .card {
+    display: inline-block;
+    margin: 5px;
+}
+
+.containerbu3 .card img {
+    width: 381px;
+    height: 480px;
+    border-radius: 10px;
+}
+
+.containerbu3 .card-content .card h2 {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 30px;
+}
+
+hr {
+    width: 100%;
+}
+@media only screen and (max-width:1230px){
+    .containerbu3 {
+        width: 100%;
+    }
+    .containerbu3 .card-content {
+    width:800px;
+    margin: auto;
+}
+}
+@media only screen and (max-width:810px){
+    .containerbu3 .card-content {
+    width:400px;
+    margin: auto;
+}
+ hr {
+    width: 100%;
+ }
+}
+
+
+@media only screen and (max-width:450px){
+    
+.containerbu3 .card img {
+    width: 281px;
+    height: 380px;
+}
+ .containerbu3 .card-content {
+    width:281px ;
+    margin: auto;
+}
+}
+/******************containerbu4************************************************************************************
+ ******************************************************************************************************************/
+.containerbu4 {
+    width: 1480px;
+     margin: auto;
+     margin-top: 60px;
+}
+.containerbu4 .container {
+    width: 100%;
+}
+
+.containerbu4 .contbu3-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+.containerbu4 .contbu3-header h1 {
+    margin-bottom: 20px;
+}
+
+.containerbu4 .card-content {
+    width:1200px ;
+    margin: auto;
+}
+
+.containerbu4 .card {
+    display: inline-block;
+    position: relative;
+}
+
+.containerbu4 .card img {
+    width: 381px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.containerbu4 .card-content .card h2 {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.containerbu4 .card-content .card p {
+    text-align: center;
+    font-family: sans-serif;
+    color:#666666;
+}
+.containerbu4 .card-content .card .SuperP {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 24px;
+    outline: 12px solid whitesmoke;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+}
+
+@media only screen and (max-width:1230px){
+    .containerbu4 {
+        width: 100%;
+    }
+    .containerbu4 .card-content {
+    width:800px;
+    margin: auto;
+}
+}
+@media only screen and (max-width:810px){
+    .containerbu4 .card-content {
+    width:400px;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width:450px){
+    
+.containerbu4 .card img {
+    width: 281px;
+    height: 380px;
+}
+ .containerbu4 .card-content {
+    width:281px ;
+    margin: auto;
+}
+
+.containerbu4 .card-content .card .SuperP{
+right: 100px;
+}
+}
+/******************containerbu5************************************************************************************
+ ******************************************************************************************************************/
+.containerbu5 {
+    width: 1480px;
+    height: fit-content;
+    background: #F2F5FF;
+    margin: auto;
+    margin-top: 197px;
+}
+.contbu5-header {
+    width: 540px;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 60px 0px 60px 0px;
+}
+.containerbu5 .contbu5-header h1 {
+    margin-bottom: 20px;
+}
+
+.containerbu5 .contbu5-header input[type=text] {
+    width: 380px;
+    height: 70px;
+    display: inline-block;
+    font-size:16px ;
+    text-align: center;
+    border: none;
+}
+
+.containerbu5 .contbu5-header .SUBMIT{
+    margin-top: 50px;
+    border: 2px solid #011C42;
+    border-radius: 3px;
+}
+.containerbu5 .contbu5-header a{
+ color: white;
+ padding: 25px 45px 25px 45px;
+ background: #011C42;
+}
+
+@media only screen and (max-width:1230px) {
+    .containerbu5 {
+    width: 100%;
+    height: 363px;
+}
+}
+@media only screen and (max-width:615px) {
+.containerbu5 .contbu5-header h1 {
+    font-size: 20px;
+}
+.containerbu5 .contbu5-header p {
+    width: 220px;
+    margin: auto;
+}
+
+.containerbu5 .contbu5-header input[type=text] {
+    width: 220px;
+    height: 70px;
+    display: inline-block;
+    font-size:16px ;
+    text-align: center;
+    border: none;
+}
+.containerbu5 .contbu5-header .SUBMIT{
+    border: unset;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 50px;
+}
+}
+@media only screen and (max-width:495px) {
+   .containerbu5 .contbu5-header .SUBMIT a {
+    padding: 25px 15px 25px 15px;
+   }
+   .containerbu5 .contbu5-header input[type=text] {
+    width: 120px;
+   }
+   .containerbu5 {
+    width: 300px;
+    margin: auto;
+   }
+   .contbu5-header {
+    width: 300px;
+    margin: auto;
+   }
+}
+
+
+
+
+/*************.containerbu6*****************************************************
+ * *****************************************************************************************/
+
+ .containerbu6 {
+width: 1480px;
+height: fit-content;
+background: #03344F;
+padding-bottom: 60px;
+ }
+ .containerbu6 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+
+ .containerbu6 .tex {
+    width: 400px;
+    height: 252px;
+    padding: 50px;
+ }
+
+ .containerbu6 .tex h1{
+color: white;
+ }
+ .containerbu6 .tex p {
+    color: white;
+ }
+
+.containerbu6 .instaimg {
+    margin-top: 60px;
+}
+
+ .containerbu6 .instaimg h1{
+   color: white;
+ }
+
+ .containerbu6 .instaimg img {
+    width: 175px;
+    height: 185px;
+ }
+
+ @media only screen and (max-width:1230px) {
+    .containerbu6 {
+        width: 100%;
+    }
+ }
+
+ @media only screen and (max-width:614px) {
+    .containerbu6 .container {
+    display: unset;
+ }
+
+ .containerbu6 .instaimg {
+    width: 370px;
+    margin: auto;
+ }
+ }
+ @media only screen and (max-width:495px) {
+    .containerbu6 .instaimg {
+        width: 180px;
+        margin: auto;
+    }
+    .containerbu6 .tex {
+    width: fit-content;
+    height: 252px;
+    padding: 50px;
+ }
+ }
+ 
